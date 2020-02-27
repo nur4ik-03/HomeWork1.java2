@@ -3,15 +3,19 @@ package com.company;
 public abstract class Addict {
     private String levelOfDependence;
     private int age;
-    private String drugs;
+    private Drugs drugs;
     private String city;
 
-    public Addict(String levelOfDependence, int age, String drugs, String city) {
+
+    public Addict(String levelOfDependence, int age, Drugs drugs, String city) {
         this.levelOfDependence = levelOfDependence;
         this.age = age;
-        this.drugs = drugs;
+        this.drugs  = drugs;
         this.city = city;
+
     }
+
+
 
 
     public String getLevelOfDependence() {
@@ -22,8 +26,15 @@ public abstract class Addict {
         return age;
     }
 
-    public String getDrugs() {
+    public Drugs getDrugs() {
         return drugs;
     }
+
+    public abstract String getCountry();
+
+    public String getInfo(){
+       return "Info " + levelOfDependence + age + drugs + city ;
+}
+
 
 }

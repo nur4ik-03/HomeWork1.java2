@@ -2,11 +2,14 @@ package com.company;
 
 public  class SnoopDogg extends Addict {
     private String name;
+    private String country;
 
 
-    public SnoopDogg(String levelOfDependence, int age, String drugs, String name, String City) {
-        super(levelOfDependence, age, drugs, City);
+    public SnoopDogg(String levelOfDependence, int age, Drugs drugs, String name, String City) {
+        super(levelOfDependence, age, drugs, City );
         this.name = name;
+
+
     }
 
     public String getName() {
@@ -25,7 +28,15 @@ public  class SnoopDogg extends Addict {
     public void sniff(String drugs){
         System.out.println(drugs);
     }
-    public String getInfo(){
-            return "Info " + name;
+
+    @Override
+    public String getCountry() {
+        return "info" + country;
     }
+
+    public String getInfo(){
+           return super.getInfo();
+    }
+
+
 }

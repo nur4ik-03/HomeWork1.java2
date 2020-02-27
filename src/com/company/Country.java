@@ -1,20 +1,19 @@
 package com.company;
 
-public class Country {
-    private String Country;
-    private  String Drugs;
+public class Country extends Addict{
+private String country;
 
-    public Country(String Country, String drugs) {
-        Country = Country;
-        Drugs = drugs;
+    public Country(String levelOfDependence, int age, Drugs drugs, String city) {
+        super(levelOfDependence, age, drugs, city);
     }
 
+    @Override
     public String getCountry() {
-        return Country;
+        return country;
     }
-
-    public String getDrugs() {
-        return Drugs;
+    public String getInfo(){
+        return "info" + country;
     }
-
 }
+
+

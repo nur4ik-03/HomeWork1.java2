@@ -1,6 +1,6 @@
 package com.company;
 
-public enum Drugs {
+public enum Drugs{
     COCAINE,
     ECSTASY,
     LSD
